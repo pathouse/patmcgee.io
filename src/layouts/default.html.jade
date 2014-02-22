@@ -1,0 +1,20 @@
+- var styles = getBlock("styles")
+- styles.add(["/styles/stylesheet.css"])
+
+doctype 5
+html(lang="en")
+  head
+    title= document.title
+    //- Latest compiled and minified CSS
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+    link(href='http://fonts.googleapis.com/css?family=Advent+Pro:400,700,100', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+    != styles.toHTML()
+  body
+    header
+      h1.title-size PatMcGee
+        small WebDeveloper
+      img(src="/images/IMG_0659.JPG")
+    .container
+      = document.content
+    

@@ -1,0 +1,44 @@
+body {
+  font-size: 16px;
+  font-family: "Noticia Text" serif;
+}
+.title-size {
+  font-size: 55px;
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Advent Pro" sans-serif;
+  color: #28475c;
+}
+a,
+a:hover {
+  color: #c73d00;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 37px;
+}
+h3 {
+  font-size: 34px;
+}
+h4 {
+  font-size: 31px;
+}
+h5 {
+  font-size: 28px;
+}
+h6 {
+  font-size: 25px;
+}
+header img {
+  border-radius: 100%;
+  max-width: 300px;
+  border-bottom: 5px solid #28475c;
+}
