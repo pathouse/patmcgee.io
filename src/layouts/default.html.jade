@@ -4,17 +4,42 @@
 doctype 5
 html(lang="en")
   head
-    title= document.title
-    //- Latest compiled and minified CSS
+    title= getPreparedTitle()
+    
+    //- STYLES
     link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
     link(href='http://fonts.googleapis.com/css?family=Advent+Pro:400,700,100', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic', rel='stylesheet', type='text/css')
     != styles.toHTML()
+
+    //- META
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    != getBlock("meta").toHTML()
   body
-    header
-      h1.title-size PatMcGee
-        small WebDeveloper
-      img(src="/images/IMG_0659.JPG")
+    
+    .row
+      .col-lg-6
+        h1.title-size PatMcGee
+          small WebDeveloper
+      .col-lg-6
+        #social.pull-right
+          a(href="http://github.com/pathouse", target="_blank")
+            img(src="/images/Github-Mark-32px.png", alt="Github")
+          a(href="http://twitter.com/patmcbambam", target="_blank")
+            img(src="/images/Social-Networks-Twitter-icon.png", alt="twitter")
+    #main-nav.well
+      ul.nav-list
+        each page in getCollection('html').findAll({isPage: true}).toJSON()
+          li
+            a(href=page.url.replace("index.html", ""))= page.title
     .container
-      = document.content
+      section#content!= content
+    footer.well
+      .row
+        .col-lg-4.col-lg-offset-4.text-center
+          p= site.copyright 
+          p
+            | This website was built using 
+            a(href="http://docpad.org", target="_blank") Docpad
+
     
