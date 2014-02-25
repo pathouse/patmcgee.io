@@ -5,8 +5,17 @@ isPage: true
 ---
 
 .row
-  .col-lg-8
+  h3 Recent Posts
+  <hr />
+  .col-lg-12
+.row
+  h3 Around the Web
+  <hr />
   .col-lg-4
-    a(class="twitter-timeline", href="https://twitter.com/PatMcBambam", data-widget-id="438132965042688000") What I'm Tweeting
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    include widgets/github-card.html.jade
+  .col-lg-4
+    include widgets/goodreads.html
+  .col-lg-4
+    include widgets/twitter-card.html.jade
+
 
