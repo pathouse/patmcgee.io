@@ -1,11 +1,11 @@
 - var styles = getBlock("styles")
-- styles.add(["/styles/stylesheet.css"])
+- styles.add(["/styles/stylesheet.css", "/styles/highlightjs_styles.css"])
 
 doctype 5
 html(lang="en")
   head
     title= getPreparedTitle()
-    
+
     //- STYLES
     link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
     link(href='http://fonts.googleapis.com/css?family=Advent+Pro:400,700,100', rel='stylesheet', type='text/css')
@@ -16,7 +16,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     != getBlock("meta").toHTML()
   body
-    
+
     .row
       .col-lg-6
         h1.title-size PatMcGee
@@ -37,9 +37,7 @@ html(lang="en")
     footer.well
       .row
         .col-lg-4.col-lg-offset-4.text-center
-          p= site.copyright 
+          p= site.copyright
           p
-            | This website was built using 
+            | This website was built using
             a(href="http://docpad.org", target="_blank") Docpad
-
-    
