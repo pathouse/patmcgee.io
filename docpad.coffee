@@ -26,6 +26,11 @@ docpadConfig = {
     posts: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'blog/posts'}).on "add", (model) ->
         model.setMetaDefaults({layout: "blog", isPage: false})
+
+  plugins:
+    ghpages:
+      deployRemote: "target"
+      deployBranch: "master"
 }
 
 # Export the DocPad Configuration
