@@ -29,7 +29,7 @@ html(lang="en")
             img(src="/images/Social-Networks-Twitter-icon.png", alt="twitter")
     #main-nav.well
       ul.nav-list
-        each page in getCollection('html').findAll({isPage: true}).toJSON()
+        each page in getCollection('pages').toJSON()
           li
             a(href=page.url.replace("index.html", ""))= page.title
     .container

@@ -13,6 +13,13 @@ docpadConfig = {
         "#{@site.title} | #{@document.title}"
       else
         @site.title
+
+  collections:
+    pages: ->
+      @getCollection("html").findAllLive({isPage: true})
+    posts: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'blog/posts'}).on "add", (model) ->
+        model.setMetaDefaults({layout: "blog", isPage: false})
 }
 
 # Export the DocPad Configuration
