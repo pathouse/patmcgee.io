@@ -5,6 +5,8 @@ date: 2014-03-15
 
 ## Fresh Start
 
+<!-- begin summary -->
+
 New website, new blog. I've done this countless times, each time I claim that I am
 sticking with it. That this is it. Well, I think this time I may actually be able
 to fulfill that promise. We'll see.
@@ -14,6 +16,8 @@ First, I was graduating college and starting my career as a freelance copywriter
 After that I was transitioning away from copywriting and becoming increasingly interested
 in science. Next, I was beginning yet another transition - this time into the world
 of computer programming and web development.
+
+<!-- read more -->
 
 This time is different, which is why I have a feeling I may actually be able to keep
 this promise to myself, that this is the last time I tear down my blog and start

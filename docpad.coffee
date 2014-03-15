@@ -14,6 +14,12 @@ docpadConfig = {
       else
         @site.title
 
+    getPostSummary: (content) ->
+      beginCut = content.search('<!-- begin summary -->')
+      offset = "<!-- begin summary -->".length
+      cutOff = content.search('<!-- read more -->')
+      content[beginCut + offset..cutOff - 1]
+
   collections:
     pages: ->
       @getCollection("html").findAllLive({isPage: true})

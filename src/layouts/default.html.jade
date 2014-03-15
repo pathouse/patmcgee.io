@@ -3,20 +3,10 @@
 
 doctype 5
 html(lang="en")
-  head
-    title= getPreparedTitle()
 
-    //- STYLES
-    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
-    link(href='http://fonts.googleapis.com/css?family=Advent+Pro:400,700,100', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic', rel='stylesheet', type='text/css')
-    != styles.toHTML()
+  include includes/head
 
-    //- META
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    != getBlock("meta").toHTML()
   body
-
     .row
       .col-lg-6
         h1.title-size PatMcGee
@@ -34,10 +24,5 @@ html(lang="en")
             a(href=page.url.replace("index.html", ""))= page.title
     .container
       section#content!= content
-    footer.well
-      .row
-        .col-lg-4.col-lg-offset-4.text-center
-          p= site.copyright
-          p
-            | This website was built using
-            a(href="http://docpad.org", target="_blank") Docpad
+
+    include includes/footer

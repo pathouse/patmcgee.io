@@ -3,8 +3,29 @@ title: "Home"
 layout: "default"
 isPage: true
 ---
-
+.row#home-icons
+  .col-lg-3.col-lg-offset-2.hicon
+    include svg-icons/computer.svg
+    h3 Web Developer
+  .col-lg-3.hicon
+    include svg-icons/beaker.svg
+    h3 Science Enthusiast
+  .col-lg-3.hicon
+    include svg-icons/person.svg
+    h3 Human Being
+<hr />
 .row
   h3 Recent Posts
   <hr />
   .col-lg-12
+    ul.blog-post-list
+      each post in getCollection("posts").toJSON().slice(0,5)
+        li
+          p
+            a(href=post.url)
+              h5= post.title
+            em= post.date.toDateString()
+          p
+            != getPostSummary(String(post.contentRenderedWithoutLayouts))
+          p
+            a(href=post.url) Read More
